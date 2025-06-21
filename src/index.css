@@ -1,3 +1,5 @@
+/* Regular CSS styling for Weather Clothing App */
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +7,197 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f0f4f8;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* App Container */
+.app-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* Weather Display */
+.weather-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.weather-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+  color: #2d3748;
+}
+
+.weather-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.weather-stat {
+  text-align: center;
+  padding: 12px;
+  background-color: #f7fafc;
+  border-radius: 8px;
+}
+
+.weather-stat-label {
+  font-size: 0.875rem;
+  color: #4a5568;
+  margin-bottom: 4px;
+}
+
+.weather-stat-value {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #2d3748;
+}
+
+/* Temperature Analysis */
+.temperature-analysis {
+  margin-top: 16px;
+  padding: 16px;
+  background-color: #edf2f7;
+  border-radius: 8px;
+}
+
+.analysis-title {
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #2d3748;
+}
+
+.analysis-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+  color: #4a5568;
+}
+
+/* Recommendations */
+.recommendations-section {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recommendations-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+  color: #2d3748;
+}
+
+.recommendations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+/* Clothing Cards */
+.clothing-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #f8fafc;
+}
+
+.clothing-category {
+  font-weight: bold;
+  color: #2b6cb0;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+}
+
+.clothing-items {
+  margin-bottom: 12px;
+}
+
+.clothing-item {
+  display: inline-block;
+  background-color: #bee3f8;
+  color: #2b6cb0;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin: 2px;
+  font-size: 0.875rem;
+}
+
+.clothing-reason {
+  font-size: 0.875rem;
+  color: #4a5568;
+  font-style: italic;
+}
+
+/* Loading and Error States */
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  color: #4a5568;
+}
+
+.error-message {
+  background-color: #fed7d7;
+  color: #c53030;
+  padding: 16px;
+  border-radius: 8px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.error-title {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 10px;
+  }
+  
+  .weather-info {
+    grid-template-columns: 1fr;
+  }
+  
+  .recommendations-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Button Styles */
+.button {
+  background-color: #3182ce;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+}
+
+.button:hover {
+  background-color: #2c5aa0;
+}
+
+.button:disabled {
+  background-color: #a0aec0;
+  cursor: not-allowed;
 }
