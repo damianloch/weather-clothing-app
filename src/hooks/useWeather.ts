@@ -81,3 +81,4 @@ export const useWeather = (initialLocation?: LocationData): UseWeatherReturn => 
     clearError,
   };
 };
+//trigger
